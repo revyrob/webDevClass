@@ -1,0 +1,204 @@
+/* general css */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* navbar css */
+.navbar {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    height: 60px;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+}
+.logo {
+    padding-left: 75px;
+    color:#335576;
+    font-weight: 700;
+}
+.navbar__left {
+    margin-left: auto;
+    text-align: right;
+    padding-right: 75px;
+}
+.navbar__item--list-item {
+    padding-bottom: 4px;
+    color: black;
+}
+.navbar__item--list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+/* a hover in navbar which transform when the user hovers
+I transformed the hover to make the color change and the font-weight
+larger */
+.navbar a:hover {
+    color:#DB7A4E;
+    font-weight: 700;
+}
+
+/* active page with underline */
+li.active {
+    border-bottom: 3px solid #DB7A4E;
+}
+
+/* container and cards  */
+.card {
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin: 20px 0px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow .5s, border 0.2s;
+}
+/* add hover to cards */
+.card:hover {
+    box-shadow: 6px -6px 6px #DB7A4E;
+    border: 3px solid black;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card__header {
+    border-bottom: 3px solid black;
+    margin: 0px 10px;
+    padding-top: 15px;
+}
+.card__info {
+    background-color: #FEFAF5;
+    padding: 10px 0px;
+    margin: 20px 20px;
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+
+/* panel to make all the margins the same for each page */
+.panel {
+    margin: 30px 0px 50px 0px;
+    padding: 25px 75px 15px 75px;
+}
+
+/* footer for global */
+.panel--footer {
+    background-color: #FEFAF5;
+    display: flex;
+    justify-content:space-around;
+    align-items:stretch;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    flex-grow: 1;
+}
+.footer__col {
+    /* padding: 0px 15px 10px 15px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.footer__header {
+    font-size: 1.25rem;
+    color: #335576;
+    margin-bottom: 25px;
+}
+.footer__info {
+    color:#335576;
+}
+.footer__subheader {
+    font-size: 0.75rem;
+    color: #DB7A4E;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    height: 0.75rem;
+}
+.footer__divide {
+    display: flex;
+    align-items:baseline;
+    justify-content:space-around;
+    
+}
+.footer__col--col {
+    margin-right: 40px;
+}
+.footer__divide img {
+    height: 30px;
+}
+
+/* button for all of site */
+.btn {
+    background-color: #DB7A4E;
+    border-radius: 20px;
+    width: 175px;
+    text-align: center;
+    padding: 10px 0px;
+    color: #FEFAF5;
+    transition: letter-spacing 1s, box-shadowing 0.5s;  
+}
+.btn:hover {
+    letter-spacing: 3px;
+    box-shadow: -2px 2px 2px #335576;
+    /* border: 3px solid #335576; */
+}
+
+/* responsive design */
+@media (max-width: 590px) {
+    .footer__col {
+        border-bottom: 1px solid #335576;
+        margin-bottom: 20px;
+    }
+    .panel--footer {
+        justify-content:left;
+        align-items:center;
+        padding-left: 30px;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar__left { 
+        margin-left: 0px;
+        padding-right: 0px;
+    }
+    .logo {
+        padding-left: 0px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 910px) {
+    .footer__divide--hours {
+        flex-direction: column;
+    }
+    .footer__col--col {
+        margin-bottom: 30px;
+    }
+}
+
+
