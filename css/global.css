@@ -45,8 +45,7 @@ a {
     width: 300px;
 }
 
-/* a hover in navbar which transform when the user hovers
-I transformed the hover to make the color change and the font-weight
+/* a hover in navbar to make the color change and the font-weight
 larger */
 .navbar a:hover {
     color:#DB7A4E;
@@ -77,29 +76,32 @@ li.active {
     box-shadow: 6px -6px 6px #DB7A4E;
     border: 3px solid black;
 }
+/* container for that holds all cards */
 .container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
+/* header within the card, if there is a header which is underlined */
 .card__header {
     border-bottom: 3px solid black;
     margin: 0px 10px;
     padding-top: 15px;
 }
-.card__info {
-    background-color: #FEFAF5;
-    padding: 10px 0px;
-    margin: 20px 20px;
-}
+/* the parent container in the card that will hold all the information */
 .card__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 300px;
 }
-
+/* style the text listed within the card */
+.card__info {
+    background-color: #FEFAF5;
+    padding: 10px 0px;
+    margin: 20px 20px;
+}
 
 /* panel to make all the margins the same for each page */
 .panel {
